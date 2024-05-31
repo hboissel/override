@@ -3,7 +3,6 @@ int main(int argc, char **argv)
     int nb;
     char buffer[28];
 
-    // puts 35 *
     puts("***********************************");
     puts("* \t     -Level00 -\t\t  *");
     puts("***********************************");
