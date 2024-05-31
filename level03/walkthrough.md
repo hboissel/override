@@ -2,7 +2,7 @@
 
 ## Reconnaissance
 
-We have two security enabled:
+We have three security enabled:
 - **RELRO Partial enabled** = GOT (Global Offset Table) placed were we cannot overflow
 - **NX enabled** = not every part of the memory are considered as being executable
 - **Canary** = Random value added after the return address, if it is modified, the program leave. Prevent overwrite of return address
