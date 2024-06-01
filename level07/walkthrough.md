@@ -14,6 +14,8 @@ In addition, the arguments and environement variables are erased so not possible
 
 ### Getting addresses
 
+![ret2libc](Ressources/ret2libc.avif)
+
 Lets try to do a `ret2libc` which consist of creating a combinaison of `libc` function call and use of strings stored in `libc`.
 How to get the address libc functions:
 ```shell
