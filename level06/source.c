@@ -49,7 +49,7 @@ int main()
     puts("***** NEW ACCOUNT DETECTED ********");
     puts("***********************************");
     printf("-> Enter Serial: ");
-    __isoc99_scanf("%u", &serial);
+    scanf("%u", &serial);
     if ( auth(login, serial) )
         return 1;
     puts("Authenticated!");
