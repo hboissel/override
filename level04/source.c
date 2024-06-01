@@ -1,9 +1,16 @@
-
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/prctl.h>
+#include <unistd.h>
 
 int main()
 {
   int status;
-  char buffer[128]; //[esp+20h]
+  char buffer[128]; //[esp+0x20]
   int v6;
   int v7;
   int event;
